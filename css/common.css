@@ -1,6 +1,19 @@
 * {
   box-sizing: border-box;
 }
+/* Стилі для обнулення відступів у елементів */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+p{
+  overflow-wrap: anywhere;
+  margin: 0;
+}
 
 /* обнулення базових властивостей списків (ul) */
 ul {
@@ -31,10 +44,32 @@ body {
   color: #212121;
   line-height: 1.5;
 }
-
+/* ----task2 */
 .gallery{
 display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 48px 24px;
 }
+/* ----task3 */
+h1 {
+  font-family: "Montserrat", sans-serif;
+  margin-top: 16px;
+  margin-left: 24px;
+  font-weight: 600;
+  font-size: 24px;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+.name-input{
+  margin-top: 24px;
+  margin-left: 24px;
+  width: 360px;
+  height: 40px;
+  font-weight: 400;
+    line-height: 150%;
+    color: #2e2f42;
+    padding-left: 16px;
+}
+
+/* ----task4 */
