@@ -214,10 +214,14 @@ button[data-destroy] {
   background: #ff4e4e;
 }
 #boxes {
+  display: flex;
+  flex-wrap: wrap;
+gap: 10px 44px;
     margin-top: 16px;
     margin-left: 24px;
   border-radius: 8px;
-  padding: 32px;
+ padding-top: 32px;
+ padding-left: 32px;
   width: 486px;
     height: 134px;
     background: #f6f6fe;
