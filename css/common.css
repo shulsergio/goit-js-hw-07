@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  
 }
 /* Стилі для обнулення відступів у елементів */
 h1,
@@ -168,3 +169,56 @@ margin: 16px auto;
       color: #fff;
 }
 /* ----task6 */
+#controls{
+margin-top: 24px;
+margin-left: 24px;
+  background: #f6f6fe;
+  border-radius: 8px;
+    padding: 32px 0 32px 32px;
+    width: 486px;
+    height: 104px;
+}
+
+
+#controls input {
+border: 1px solid #808080;
+border-radius: 8px;
+padding-left: 72px;
+width: 150px;
+height: 40px;
+  font-family: "Montserrat", sans-serif;
+font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+#controls button{
+  margin-left: 16px;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 120px;
+  height: 40px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.04em;
+    color: #fff;
+}
+button[data-create] {
+  background: #4e75ff;
+}
+button[data-destroy] {
+  background: #ff4e4e;
+}
+#boxes {
+    margin-top: 16px;
+    margin-left: 24px;
+  border-radius: 8px;
+  padding: 32px;
+  width: 486px;
+    height: 134px;
+    background: #f6f6fe;
+}
