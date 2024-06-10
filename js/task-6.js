@@ -15,20 +15,24 @@ let buttonDestroy = document.querySelector("[data-destroy]");
  */
 function createBoxes() {
   console.log("amount.value-", amount.value);
+  let newBoxes = [];
   for (let i = 0; i < amount.value; i++) {
-    const newBoxes = document.createElement("div");
+    newBoxes = document.createElement("div");
     newBoxes.classList.add("new-box");
     newBoxes.style.width = `${30 + 10 * images.length}px`;
     newBoxes.style.height = `${30 + 10 * images.length}px`;
     newBoxes.style.backgroundColor = getRandomHexColor();
-    boxes.append(newBoxes);
-    images.push({
-      divName: newBoxes.id,
-      divWidth: newBoxes.width,
-      divHeight: newBoxes.height,
-      divColor: newBoxes.style.backgroundColor,
-    });
+    images.push(newBoxes);
+    // images.push({
+    //   divName: newBoxes.id,
+    //   divWidth: newBoxes.width,
+    //   divHeight: newBoxes.height,
+    //   divColor: newBoxes.style.backgroundColor,
+    // });
+    console.log("images.length- ", images.length);
+    console.log("images- ", images);
   }
+  boxes.append(...images);
 }
 /**
  * удаляю всі дані
