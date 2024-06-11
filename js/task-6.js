@@ -3,7 +3,7 @@ function getRandomHexColor() {
     .toString(16)
     .padStart(6, 0)}`;
 }
-let images = [];
+
 let boxes = document.querySelector("#boxes");
 let amount = document.querySelector("input");
 let buttonCreate = document.querySelector("[data-create]");
@@ -14,8 +14,13 @@ let buttonDestroy = document.querySelector("[data-destroy]");
  * роблю нові елементи передаю у масив об*єектів
  */
 function createBoxes() {
-  console.log("amount.value-", amount.value);
+  let images = [];
   let newBoxes = [];
+  boxes.innerHTML = "";
+  console.log("before amount.value- ", amount.value);
+  console.log("before images.length- ", images.length);
+  console.log("before images- ", images);
+
   for (let i = 0; i < amount.value; i++) {
     newBoxes = document.createElement("div");
     newBoxes.classList.add("new-box");
@@ -23,29 +28,26 @@ function createBoxes() {
     newBoxes.style.height = `${30 + 10 * images.length}px`;
     newBoxes.style.backgroundColor = getRandomHexColor();
     images.push(newBoxes);
-    // images.push({
-    //   divName: newBoxes.id,
-    //   divWidth: newBoxes.width,
-    //   divHeight: newBoxes.height,
-    //   divColor: newBoxes.style.backgroundColor,
-    // });
-    console.log("images.length- ", images.length);
-    console.log("images- ", images);
+
+    console.log("after images.length- ", images.length);
+    console.log("after images- ", images);
   }
   boxes.append(...images);
 }
 /**
  * удаляю всі дані
  */
-function removeBoxes() {
-  amount.value = 0;
-  images = [];
+function destroyBoxes() {
+  amount.value = "";
+  // images = [];
   boxes.innerHTML = "";
 }
 buttonCreate.addEventListener("click", () => {
-  createBoxes();
+  amount.value > 0 && amount.value <= 100
+    ? createBoxes()
+    : alert("Число має бути від 1 до 100");
 });
 buttonDestroy.addEventListener("click", () => {
-  removeBoxes();
+  destroyBoxes();
   console.log("after amount.value-", amount.value);
 });
