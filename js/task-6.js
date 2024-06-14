@@ -33,13 +33,13 @@ function createBoxes() {
     console.log("after images- ", images);
   }
   boxes.append(...images);
+  console.log("after boxes- ", boxes);
 }
 /**
  * удаляю всі дані
  */
 function destroyBoxes() {
   amount.value = "";
-  // images = [];
   boxes.innerHTML = "";
 }
 buttonCreate.addEventListener("click", () => {
